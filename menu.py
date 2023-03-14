@@ -35,14 +35,20 @@ def menu():
 
         elif op == 2:
             while True:
+                novo_usuario.clear()
+                if len(cliente) == 0:
+                    print('Não há cliente cadastrado')
+                    break
+
                 cliente = input('Nome: ')
+
                 for i in range(len(clientes)):
                     if cliente == clientes[i][0]:
                         novo_usuario.append(clientes[i][0])
                         novo_usuario.append(clientes[i][1])
                         novo_usuario.append(clientes[i][2])
                         break
-                print('Cliente não cadastrado')
+
 
         elif op == 3:
             nome_filme = input('Digite o nome do filme: ')
@@ -53,5 +59,4 @@ def menu():
 
         elif op == 4:
             print(filmes)
-menu()
 
